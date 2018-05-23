@@ -36,7 +36,7 @@ def char_count(string,char):
 def second_function():
  print("Now, this program is going to show the amount of each character in a defined string.")
  while True:
-  string = input("\n\nPlease enter a string: ")
+  string = raw_input("\n\nPlease enter a string: ")
   if string == "":
    continue 
   else:
@@ -71,7 +71,7 @@ def back():
 
 def enter():
  while True:
-  hit = input("\nHit any key to start again the program or type exit to quit: ")
+  hit = raw_input("\nHit any key to start again the program or type exit to quit: ")
   if hit == 'exit' or hit == 'EXIT' or hit == 'Exit':
    print("\n\nGoodbye!!!!\n\n")
    time.sleep(5)
@@ -98,7 +98,7 @@ while True:
  print("\nAdd, Sub, Mul, Div, Pow, Sqrt\n")
 
  while True:
-  choice = input("\nPlease enter the valid operation here(type exit to exit program): ")
+  choice = raw_input("\nPlease enter the valid operation here(type exit to exit program): ")
   if choice == "":
    continue
   else:
