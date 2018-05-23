@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
 #import of libraries
-import time
-import math 
-import os
-import subprocess
-import sys
+from math import pow, sqrt 
+from time import sleep
+from os import system
+from sys import exit
 
 #function definitions:
 def add(x,y):
@@ -21,10 +20,10 @@ def div(x,y):
  return x/y
 
 def power(x,y):
- return math.pow(x,y)
+ return pow(x,y)
 
 def square(x):
- return math.sqrt(x)
+ return sqrt(x)
 
 def char_count(string,char):
  count=0
@@ -42,29 +41,29 @@ def second_function():
   else:
    break
  if string == 'Exit' or string == 'EXIT' or string == 'exit':
-  sys.exit()   
+  exit()   
  print("\n\nThe entered string is:" ,string)
- time.sleep(5)
+ sleep(5)
  for char in "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}:,./+-":
   if char == "a":
    print("\n")
   print("The amount of",char,"characters in the string is: ", char_count(string,char))
-  time.sleep(1)
+  sleep(1)
 
 def output1():
- os.system("cat /proc/partitions | grep -w sd[a-z] | awk '{print $4}' | tr '\n' ' ' | uniq")
+ system("cat /proc/partitions | grep -w sd[a-z] | awk '{print $4}' | tr '\n' ' ' | uniq")
 
 def output2():
- os.system("cat /proc/partitions")
+ system("cat /proc/partitions")
 
 def third_function():
- time.sleep(2)   
+ sleep(2)   
  print("\n\nDisk labels in this PC are: ")  
  output1()
- time.sleep(2)
+ sleep(2)
  print("\nand the partitions here are the following: \n")
  output2()
- time.sleep(5)
+ sleep(5)
 
 def back():
  print("##########Going back to the beginning of the program##########\n") 
@@ -74,25 +73,25 @@ def enter():
   hit = input("\nHit any key to start again the program or type exit to quit: ")
   if hit == 'exit' or hit == 'EXIT' or hit == 'Exit':
    print("\n\nGoodbye!!!!\n\n")
-   time.sleep(5)
-   os.system('clear')
-   sys.exit()
+   sleep(5)
+   system('clear')
+   exit()
   else:
-   os.system('clear')
+   system('clear')
    back()
    break
 
 def invalid():
  for x in range(5):
   print ("\n\nINVALID OPERATION TYPE!!!!!\n\n")
-  time.sleep(1)
- os.system('clear')
+  sleep(1)
+ system('clear')
 
-os.system('clear')
+system('clear')
 
 #Main program loop:
 while True:
- os.system('date')   
+ system('date')   
  print("\n\n##########Siema, this is a simple program, that can add, subtract, multiple and divide and is doing something else##########\n")
  print("\nNow please select a valid operation for the calculator. Valid opertions are:")
  print("\nAdd, Sub, Mul, Div, Pow, Sqrt\n")
@@ -165,8 +164,8 @@ while True:
   continue
  if choice == 'exit' or choice == 'EXIT'or choice == 'Exit':
   print("\n\nGoodbye!!!!\n\n")
-  time.sleep(5)
-  os.system('clear')
+  sleep(5)
+  system('clear')
   break 
  else:
   invalid()
