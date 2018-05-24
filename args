@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+
+import sys
+
+print("First pos arg is", sys.argv[0])
