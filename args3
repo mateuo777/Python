@@ -2,24 +2,12 @@
 
 import argparse
 
-parser = argparse.ArgumentParser(description='Read a file in reverse')
-parser.add_argument('filename', help='just the file to read')
-parser.add_argument('--limit', '-l', type=int, help='the number of lines to read')
-parser.add_argument('--version', '-v', action='version', version='%(prog)s 2.0')
+parser = argparse.ArgumentParser(description='Search for words inclusing partial word')
+parser.add_argument('snippet', help='patial (or complete string to search for')
 
 args = parser.parse_args()
-print("The file name is: %s" % (args.filename))
+snippet = args.snippet.lower()
 
-try:
-    f = open(args.filename)
-except IOError as err:
-    print("Error: file not found")
-else:
-    with f:
-        limit = args.limit
-        lines = f.readlines()
-        lines.reverse()
+words = open('/usr/share/dict/words').readlines()
 
-
-finally: 
-    print("We're finished")
+print([word.strip() for word in words if snippet in word.lower()])
