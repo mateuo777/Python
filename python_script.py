@@ -25,6 +25,8 @@ def power(x,y):
 def square(x):
  return sqrt(x)
 
+chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}:,./+-"
+
 def char_count(string,char):
  count=0
  for c in string:
@@ -42,12 +44,12 @@ def second_function():
    break
  if string == 'Exit' or string == 'EXIT' or string == 'exit':
   exit()   
- print("\n\nThe entered string is:" ,string)
+ print("\n\nThe entered string is: %s" % (string))
  sleep(5)
- for char in "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}:,./+-":
+ for char in chars:
   if char == "a":
    print("\n")
-  print("The amount of",char,"characters in the string is: ", char_count(string,char))
+  print("The amount of %s characters in the string is: %s" % (char, char_count(string,char)))
   sleep(1)
 
 def output1():
@@ -107,7 +109,7 @@ while True:
   num1 = int(input("\nPlease enter the first value here: "))
   num2 = int(input("\nPlease enter the second value here, to be added to the first value: "))
   print ("\n\n")
-  print ('##########', num1 ,"+", num2 ,"=", add(num1,num2),'##########')
+  print ("########## %s + %s = %s ##########" % (num1, num2, add(num1,num2)))
   print ("\n\n")
   second_function()
   third_function()
@@ -117,7 +119,7 @@ while True:
   num1 = int(input("\nPlease enter the first value here: "))
   num2 = int(input("\nPlease enter the second value here: "))
   print ("\n\n")
-  print ('##########', num1 ,"-", num2 ,"=", sub(num1,num2),'##########')
+  print ("########## %s - %s = %s ##########" % (num1, num2, sub(num1,num2)))
   print ("\n\n")
   second_function()
   third_function()
@@ -127,7 +129,7 @@ while True:
   num1 = int(input("\nPlease enter the first value here: "))
   num2 = int(input("\nPlease enter the second value here: "))
   print ("\n\n")
-  print ('##########', num1 ,"*", num2 ,"=", mul(num1,num2),'##########')
+  print ("########## %s * %s = %s ##########" % (num1, num2, mul(num1,num2)))
   print ("\n\n")
   second_function()
   third_function()
@@ -137,7 +139,7 @@ while True:
   num1 = int(input("\nPlease enter the first value here: "))
   num2 = int(input("\nPlease enter the second value here and the first value will be divided by this value: "))
   print ("\n\n")
-  print ('##########', num1 ,"/", num2 ,"=", div(num1,num2),'##########')
+  print ("########## %s / %s = %s ##########" % (num1, num2, div(num1,num2)))
   print ("\n\n")
   second_function()
   third_function()
@@ -147,7 +149,7 @@ while True:
   num1 = int(input("\nPlease enter the first value here: "))
   num2 = int(input("\nPlease enter the second value here to raise the first value to the power of this value: "))
   print ("\n\n")
-  print ('##########', num1 ,"^", num2 ,"=", power(num1,num2),'##########')
+  print ("########## %s ^ %s = %s ##########" % (num1, num2, pow(num1,num2)))
   print ("\n\n")
   second_function()
   third_function()
@@ -156,7 +158,7 @@ while True:
  if choice == 'Sqrt' or choice == 'sqrt':
   num1 = int(input("\nPlease enter the value here: "))
   print ("\n\n")
-  print ('##########square of', num1 ,"=", square(num1),'##########')
+  print ("########## square of %s = %s ##########" % (num1, square(num1)))
   print ("\n\n")
   second_function()
   third_function()
