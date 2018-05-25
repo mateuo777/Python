@@ -20,10 +20,6 @@ else:
         lines = f.readlines()
         lines.reverse()
 
-        if limit:
-            lines = lines[:limit]
 
-        for line in lines:
-            print(line.strip()[::-1])
 finally: 
     print("We're finished")
